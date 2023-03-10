@@ -1,7 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+	
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="/assets/img/favicon.png" type="image/png">
+		
+<script>
+
+
+
+function getNewWord() {
+  document.getElementById("word").innerHTML = Math.floor(Math.random() * 5000);
+  Math.floor(Math.random() * 5001);
+}
+
+function ok() {
+	document.getElementById("buttonShow").hidden = false;
+    document.getElementById("buttonNext").hidden = false;
+    document.getElementById("word").hidden = false;
+    document.getElementById("buttonOk").hidden = true;
+}
+
+
+
+
+</script>		
+		
+</head>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<h1>5 000 English words</h1>
+
+<p>Let's get started!</p>
+
+<p hidden id="word">Text here.</p>
+
+<button hidden id="buttonShow" type="button" onclick="getNewWord()">Show</button>
+<button id="buttonOk" type="button" onclick="ok()">Ok</button>
+<button hidden id="buttonNext" type="button" onclick="getNewWord()">Next</button>
+
+
 </body>
+
 </html>
