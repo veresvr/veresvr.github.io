@@ -4,20 +4,26 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="shortcut icon" href="/assets/img/favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+  </style>
 		
 <script>
 
 
 
 function getNewWord() {
-  document.getElementById("word").innerHTML = Math.floor(Math.random() * 5000);
-  Math.floor(Math.random() * 5001);
+  document.getElementById("word").innerHTML = Math.floor(Math.random() * 5001);
+  document.getElementById("answer").innerHTML = Math.floor(Math.random() * 5001);
 }
 
 function ok() {
 	document.getElementById("buttonShow").hidden = false;
     document.getElementById("buttonNext").hidden = false;
     document.getElementById("word").hidden = false;
+    document.getElementById("answer").hidden = false;
+    document.getElementById("welcome").hidden = true;
     document.getElementById("buttonOk").hidden = true;
 }
 
@@ -29,15 +35,25 @@ function ok() {
 </head>
 
 <body>
-<h1>5 000 English words</h1>
+<h1 class="text-center">5 000 English words</h1>
 
-<p>Let's get started!</p>
 
-<p hidden id="word">Text here.</p>
+<div class="box">
+  <p class="text-center font" id="welcome"> Let's get started!</p>
 
-<button hidden id="buttonShow" type="button" onclick="getNewWord()">Show</button>
-<button id="buttonOk" type="button" onclick="ok()">Ok</button>
-<button hidden id="buttonNext" type="button" onclick="getNewWord()">Next</button>
+  <div class="text-center" hidden id="word">Text here.</div>  
+  <div class="text-center" hidden id="answer">Text here.</div> 
+  </div>
+<p>
+  
+  </p>
+<div class="btn-group">
+  
+  <button class="text-center font button" hidden id="buttonShow" type="button" onclick="getNewWord()">Show</button>
+  <button class="text-center font button" id="buttonOk" type="button" onclick="ok()">Ok</button>
+  <button class="text-center font button" hidden id="buttonNext" type="button" onclick="getNewWord()">Next</button>  
+  </div>   
+  
 
 
 </body>
