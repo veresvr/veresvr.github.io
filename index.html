@@ -1,61 +1,29 @@
-<!DOCTYPE html>
 <html lang="en">
-	
-<head>
-	<meta charset="utf-8">
-	<link rel="shortcut icon" href="/assets/img/favicon.png" type="image/png">
-    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
-  <style>
-  @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
-  </style>
-		
-<script>
+          <head>
+            <meta charset="utf-8">
+          
+            <title>English words</title>
+			<link rel="shortcut icon" href="/assets/img/favicon.png" type="image/png">
+            <meta name="description" content="Figma htmlGenerator">
+            <meta name="author" content="Vladimir Tyrkin">
+            <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Anonymous+Pro&display=swap" rel="stylesheet">
 
-
-
-function getNewWord() {
-  document.getElementById("word").innerHTML = Math.floor(Math.random() * 5001);
-  document.getElementById("answer").innerHTML = Math.floor(Math.random() * 5001);
-}
-
-function ok() {
-	document.getElementById("buttonShow").hidden = false;
-    document.getElementById("buttonNext").hidden = false;
-    document.getElementById("word").hidden = false;
-    document.getElementById("answer").hidden = false;
-    document.getElementById("welcome").hidden = true;
-    document.getElementById("buttonOk").hidden = true;
-}
-
-
-
-
-</script>		
-		
-</head>
-
-<body>
-<h1 class="text-center">English words</h1>
-
-
-<div class="box">
-  <p class="text-center font" id="welcome"> Let's get started!</p>
-
-  <div class="text-center" hidden id="word">Text here.</div>  
-  <div class="text-center" hidden id="answer">Text here.</div> 
-  </div>
-<p>
-  
-  </p>
-<div class="btn-group">
-  
-  <button class="text-center font button" hidden id="buttonShow" type="button" onclick="getNewWord()">Show</button>
-  <button class="text-center font button" id="buttonOk" type="button" onclick="ok()">Ok</button>
-  <button class="text-center font button" hidden id="buttonNext" type="button" onclick="getNewWord()">Next</button>  
-  </div>   
-  
-
-
-</body>
-
-</html>
+            <link rel="stylesheet" href="styles.css">
+            
+            <style>
+              /*
+                Figma Background for illustrative/preview purposes only.
+                You can remove this style tag with no consequence
+              */
+              body {background: #E5E5E5; }
+            </style>
+          
+          </head>
+          
+          <body>
+            <div class=frame_1_31_63><span  class="transcription_31_69">transcription</span><span  class="translate_31_70">translate</span><span  class="engwords_31_71">english word</span><span  class="footer_31_72">по всем вопросам в тг: @veresvr
+</span><div class=sharp_button_31_155><div class=onclick_default_31_147><div class=button_31_145><span  class="try_it_for_free_31_146">Show</span></div></div><div class=onclick_new_value_31_150><div class=button_31_151><span  class="try_it_for_free_31_152">Next</span><div class=arrow_31_153><div  class="vector_31_154"></div></div></div></div></div><span  class="currnumber_31_157">number</span></div>
+          </body>
+          </html>
