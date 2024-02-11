@@ -15,15 +15,15 @@ div {
 form {
     padding: 20px;
     font-family: Arial;
-    font-size: 13px;
-    display: inline-block;
+    font-size: 16px;
+    /* display: inline-block; */
 	background-color: #37393c;
     color: white;
 }
 
 label {
     padding-top: 6px;
-  display: inline-block;
+ /* display: inline-block; */
     line-height: 18px;
    float: middle; 
     color: #b6daff;

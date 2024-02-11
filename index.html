@@ -1,9 +1,38 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Формы html</title>
+		<title>words</title>
 		<meta charset="utf-8">
+    <link rel="shortcut icon" href="/assets/img/favicon.png" type="image/png">
 		<link rel="stylesheet" type="text/css" href="styles.css">
+
+    <script>
+
+    function getNewWord() {
+      listNumber = Math.floor(Math.random() * 5001);
+      
+      document.getElementById("textEng").innerHTML = listNumber;
+      document.getElementById("textTransc").innerHTML = listNumber;
+      document.getElementById("textRus").innerHTML = listNumber;
+    }
+    
+    function ok() {
+      document.getElementById("buttonShow").hidden = false;
+        document.getElementById("buttonNext").hidden = false;
+        document.getElementById("word").hidden = false;
+        document.getElementById("answer").hidden = false;
+        document.getElementById("welcome").hidden = true;
+        document.getElementById("buttonOk").hidden = true;
+    }
+    
+    
+    
+    
+    </script>		
+
+
+
+
 	</head>
 	<body>
 		<form>
@@ -11,22 +40,22 @@
 				<label>English words</label> <br>
 </div>
 
-			<div>
+			<div style="text-align:center">
             <textarea readonly id="textEng">text</textarea><br>
 			</div>
-			<div>
+			<div style="text-align:center">
 				<label>Transcription</label> <br>
 				<textarea readonly id="textTransc">text</textarea>
 			</div>
 
-			<div>
+			<div style="text-align:center">
 				<label>Russian</label><br>
               	<textarea readonly id="textRus">text</textarea>
 			</div>
           
 			<div style="text-align:center">
-				<button type="submit">SHOW</button>
-				<button type="reset">NEXT</button>
+				<button>SHOW</button>
+				<button onclick="getNewWord()">NEXT</button>
 			</div>
 		</form>
 	</body>
