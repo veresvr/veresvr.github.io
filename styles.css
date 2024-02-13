@@ -15,7 +15,7 @@ div {
 form {
     padding: 20px;
     font-family: Arial;
-    font-size: 16px;
+    font-size: medium;
     /* display: inline-block; */
 	background-color: #37393c;
     color: white;
@@ -99,7 +99,7 @@ button {
     -o-transition: 0.1s linear all;
     transition: 0.1s linear all;
 }
-
+/*
 button[type=reset] {
 	background-color: #292929;
     background-repeat: repeat-x;
@@ -113,8 +113,8 @@ button[type=reset] {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#646464', endColorstr='#292929', GradientType=0);
 	border: 1px solid #161616;
 }
-
-button:hover,button[type=reset]:hover {
+*/
+button:hover {
     background-position: 0 -15px;
 }
 
@@ -157,3 +157,8 @@ ul li label {
 	color: #efefef;
 }
 
+footer a {
+    font: small "Fira Sans", sans-serif;
+    text-align: center;
+    padding: 5px;
+  }
