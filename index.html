@@ -10,9 +10,14 @@
 		const rowsNumber = 9796;
 		const firstRow = 1;
 			
-		var fs = require("fs");
-		var text = fs.readFileSync("/assets/test.txt", "utf-8");
-		console.log(text);
+
+		let wordsList = new FileReader();
+		wordsList.readAsText("/assets/test.txt");
+
+		reader.onload = function() {
+    	console.log(reader.result);
+  		};
+
 
 
 
