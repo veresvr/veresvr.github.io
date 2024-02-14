@@ -3,18 +3,33 @@
 	<head>
 		<title>words</title>
 		<meta charset="utf-8">
-    <link rel="shortcut icon" href="/assets/img/favicon.png" type="image/png">
+    	<link rel="shortcut icon" href="/assets/img/favicon.png" type="image/png">
 		<link rel="stylesheet" type="text/css" href="styles.css">
 
     <script>
+		const rowsNumber = 9796;
+		const firstRow = 1;
+			
+		var fs = require("fs");
+		var text = fs.readFileSync("/assets/test.txt", "utf-8");
+		console.log(text);
 
-    function getNewWord() {
-      listNumber = Math.floor(Math.random() * 5001);
+
+
+		function getRandomIntInclusive() {
+  			min = Math.ceil(firstRow);
+  			max = Math.floor(rowsNumber);
+  			return Math.floor(Math.random() * (max - min + 1) + min); // max & min INCLUDED
+		}
+
+
+    	function getNewWord() {
+      		listNumber = getRandomIntInclusive();
       
-      document.getElementById("textEng").innerHTML = listNumber;
-      document.getElementById("textTransc").innerHTML = listNumber;
-      document.getElementById("textRus").innerHTML = listNumber;
-    }
+      		document.getElementById("textEng").innerHTML = listNumber;
+      		document.getElementById("textTransc").innerHTML = listNumber;
+      		document.getElementById("textRus").innerHTML = listNumber;
+    	}
     
 
     
@@ -22,20 +37,19 @@
     
     
     </script>		
-
-
-
-
 	</head>
+
+
 	<body>
 		<form>
-<div style="text-align:center">
-				<label>English words</label> <br>
-</div>
+			<div style="text-align:center">
+				<label>English words</label> <br><br>
+			</div>
 
 			<div style="text-align:center">
             <textarea readonly id="textEng">text</textarea><br>
 			</div>
+
 			<div style="text-align:center">
 				<label>Transcription</label> <br>
 				<textarea readonly id="textTransc">text</textarea>
@@ -54,7 +68,7 @@
 
 		<footer style="text-align:center">
 			  2024 <a href="https://t.me/veresvr">veresvr</a>
-		  </footer>
+		</footer>
 
 	</body>
 </html>

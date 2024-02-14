@@ -33,7 +33,7 @@ label {
 
 input,select,textarea {
     display: inline-block;
-    width: 350px;
+    width: 95%;
     height: auto;
     padding: 4px;
     line-height: 18px;
@@ -131,4 +131,6 @@ footer a {
     font: small "Fira Sans", sans-serif;
     text-align: center;
     padding: 5px;
+    flex-grow: 0;
+    flex-shrink: 0;
   }
