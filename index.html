@@ -16,14 +16,7 @@
       document.getElementById("textRus").innerHTML = listNumber;
     }
     
-    function ok() {
-      document.getElementById("buttonShow").hidden = false;
-        document.getElementById("buttonNext").hidden = false;
-        document.getElementById("word").hidden = false;
-        document.getElementById("answer").hidden = false;
-        document.getElementById("welcome").hidden = true;
-        document.getElementById("buttonOk").hidden = true;
-    }
+
     
     
     
@@ -54,8 +47,8 @@
 			</div>
           
 			<div style="text-align:center">
-				<button>SHOW</button>
-				<button onclick="getNewWord()">NEXT</button>
+				<button type="button">SHOW</button>
+				<button type="button" onclick="getNewWord()">NEXT</button>
 			</div>
 		</form>
 
