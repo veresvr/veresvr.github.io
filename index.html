@@ -7,16 +7,36 @@
 		<link rel="stylesheet" type="text/css" href="styles.css">
 
     <script>
-		const rowsNumber = 9796;
-		const firstRow = 1;
+		var rowsNumber = 9796;
+		var firstRow = 1;
+		var str = 'qualification [ˌkwɒlɪfɪˈkeɪʃən] квалификация';	//global variable
+		var firstBracket = 0;
+		var secondBracket = 0;
 			
-
+/*
 		let wordsList = new FileReader();
 		wordsList.readAsText("/assets/test.txt");
 
 		reader.onload = function() {
     	console.log(reader.result);
   		};
+*/
+
+var test;
+$.ajax({
+        url: "/assets/test.txt",
+        dataType: "text",
+        async: true,
+        success: function(msg){
+            str = msg;
+            alert('Содержимое файла: '+str);
+        }
+    });
+
+
+
+	
+
 
 
 
@@ -30,13 +50,22 @@
 
     	function getNewWord() {
       		listNumber = getRandomIntInclusive();
+			// update string using random number
+
+			firstBracket = str.indexOf('[');
+			if (firstBracket === -1) { console.log("firstBracket " +firstBracket);}
+			secondBracket = str.indexOf(']');
       
-      		document.getElementById("textEng").innerHTML = listNumber;
-      		document.getElementById("textTransc").innerHTML = listNumber;
-      		document.getElementById("textRus").innerHTML = listNumber;
+      		document.getElementById("textEng").innerHTML = str.slice(0, firstBracket);
+      		document.getElementById("textTransc").innerHTML = " ";
+      		document.getElementById("textRus").innerHTML = " ";
     	}
     
+		function showAnswer() {
 
+			document.getElementById("textTransc").innerHTML = str.substring(firstBracket+1, secondBracket);
+			document.getElementById("textRus").innerHTML = str.substring(secondBracket+1, str.length);   
+		}
     
     
     
@@ -52,21 +81,21 @@
 			</div>
 
 			<div style="text-align:center">
-            <textarea readonly id="textEng">text</textarea><br>
+            <textarea readonly id="textEng">Press NEXT button</textarea><br>
 			</div>
 
 			<div style="text-align:center">
 				<label>Transcription</label> <br>
-				<textarea readonly id="textTransc">text</textarea>
+				<textarea readonly id="textTransc"> </textarea>
 			</div>
 
 			<div style="text-align:center">
 				<label>Russian</label><br>
-              	<textarea readonly id="textRus">text</textarea>
+              	<textarea readonly id="textRus"> </textarea>
 			</div>
           
 			<div style="text-align:center">
-				<button type="button">SHOW</button>
+				<button type="button" onclick="showAnswer()">SHOW</button>
 				<button type="button" onclick="getNewWord()">NEXT</button>
 			</div>
 		</form>
