@@ -32,6 +32,8 @@ label {
 }
 
 input,select,textarea {
+    font: "Fira Sans", sans-serif;
+    font-size: large;
     display: inline-block;
     width: 95%;
     height: auto;
@@ -94,21 +96,7 @@ button {
     -o-transition: 0.1s linear all;
     transition: 0.1s linear all;
 }
-/*
-button[type=reset] {
-	background-color: #292929;
-    background-repeat: repeat-x;
-    background-image: -khtml-gradient(linear, left top, left bottom, from(#646464), to(#292929));
-    background-image: -moz-linear-gradient(top, #646464, #292929);
-    background-image: -ms-linear-gradient(top, #646464, #292929);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #646464), color-stop(100%, #292929));
-    background-image: -webkit-linear-gradient(top, #646464, #292929);
-    background-image: -o-linear-gradient(top, #646464, #292929);
-    background-image: linear-gradient(top, #646464, #292929);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#646464', endColorstr='#292929', GradientType=0);
-	border: 1px solid #161616;
-}
-*/
+
 button:hover {
     background-position: 0 -15px;
 }
